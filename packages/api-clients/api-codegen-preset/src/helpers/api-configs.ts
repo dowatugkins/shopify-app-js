@@ -46,4 +46,18 @@ export const apiConfigs: ApiConfigs = {
       },
     },
   },
+  Customer: {
+    schema: 'https://shopify.dev/customer-graphql-direct-proxy%%API_VERSION%%',
+    schemaFile: 'customer%%API_VERSION%%.schema.json',
+    typesFile: 'customer.types',
+    queryTypesFile: 'customer.generated',
+    interfaceExtension: `declare module '%%MODULE%%' {\n  type InputMaybe<T> = CustomerTypes.InputMaybe<T>;\n  interface CustomerQueries extends %%QUERY%% {}\n  interface CustomerMutations extends %%MUTATION%% {}\n}`,
+    // module: '@shopify/graphql-client',
+    module: '@shopify/customer-api-client',
+    presetConfigs: {
+      importTypes: {
+        namespace: 'CustomerTypes',
+      },
+    },
+  },
 };

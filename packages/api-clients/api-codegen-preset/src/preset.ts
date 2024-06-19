@@ -8,6 +8,8 @@ export const preset: Types.OutputPreset<ShopifyApiPresetConfig> = {
   buildGeneratesSection: (options) => {
     const apiType = options.presetConfig.apiType;
 
+    console.log({options, apiConfigs, apiType});
+
     const {interfaceExtension, module, presetConfigs} = apiConfigs[apiType];
     const typesFile = apiConfigs[apiType].typesFile;
 
