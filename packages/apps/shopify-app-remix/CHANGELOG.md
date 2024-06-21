@@ -1,5 +1,14 @@
 # @shopify/shopify-app-remix
 
+## 3.0.2
+
+### Patch Changes
+
+- 1de1f15: bump jose from 5.4.0 to 5.4.1
+- Updated dependencies [1de1f15]
+  - @shopify/shopify-api@11.0.2
+  - @shopify/shopify-app-session-storage@3.0.2
+
 ## 3.0.1
 
 ### Patch Changes
